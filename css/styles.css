@@ -299,24 +299,121 @@ transition: opacity 1s ease-in-out;
   font-size: 20px;
   line-height: 1.15;
   text-align: center;
+  letter-spacing: 0.03em;
 
   color: var(--title-text-color);
 }
 
 .form-field {
+  margin-left: 40px;
+  margin-bottom: 10px;
+  margin-right: 40px;
+}
+
+.form-input:focus {
+  border: 1px solid var(--accent-color);
+}
+
+.form-input:focus + .icon-modal {
+  fill: var(--accent-color);
 }
 
 .form-label {
+  display: block;
   margin-bottom: 4px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  color: var(--primary-text-color);
+}
+
+.form-label a {
+  color: var(--accent-color);
+  text-decoration: underline;
 }
 
 .form-input {
+  width: 100%;
+  padding-top: 11px;
   padding-left: 42px;
+  padding-bottom: 11px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  outline: none;
 }
 
-/* .form-input:focus + .form-label {
-  color: var(--accent-color);
-} */
+.input-field {
+  position: relative;
+}
+
+.icon-modal {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+}
+
+.form-input::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form-comment {
+  padding: 12px 16px 12px 16px;
+}
+
+textarea {
+  resize: none;
+}
+
+.agreement {
+  margin-top: 20px;  
+}
+
+.icon-checkbox,
+.icon-check {
+  vertical-align: text-bottom;
+  width: 16px;
+  height: 15px; 
+}
+
+ .icon-check {  
+  display: none;
+}
+
+.agree-checkbox {
+  display: none; 
+}
+
+.agree-checkbox:checked + .agree-label .icon-check {
+  display: unset;
+}
+.agree-checkbox:checked + .agree-label .icon-checkbox {
+  display: none;
+}
+
+.agree-label {
+  text-align: center;
+
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.btn-modal {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  padding: 10px 55px 10px 56px;
+}
+
+.submit-button {
+  text-align: center;
+}
 
 
 /*Sections*/
@@ -796,4 +893,24 @@ fill: var(--accent-color);
   width: 20px;
   height: 20px;
   fill: var(--primary-white-color);
+}
+
+/*Bottom form*/
+.form-bottom {
+  margin-left: 93px;
+}
+
+.bottom-input {
+  padding-top: 15px;
+  padding-left: 16px;
+  padding-bottom: 15px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: var(--background-dark-color);
+}
+
+.subscribe-btn {
 }
